@@ -1,5 +1,5 @@
 from rest_framework import serializers, fields
-from .models import Especialidade, Medico, Agenda, Consultas, MY_CHOICES
+from .models import Especialidade, Medico, Agenda, Consultas, HORARIOS
 
 
 class EspecialidadeSerializer(serializers.ModelSerializer):
@@ -30,7 +30,7 @@ class MedicoSerializer(serializers.ModelSerializer):
 class AgendaSerializer(serializers.ModelSerializer):
 
     medico = EspecialidadeSerializer(read_only=True)
-    horas = fields.MultipleChoiceField(choices=MY_CHOICES)
+    horas = fields.MultipleChoiceField(choices=HORARIOS)
     class Meta:
         model = Agenda
         fields = (
@@ -41,6 +41,9 @@ class AgendaSerializer(serializers.ModelSerializer):
         )
 
 class ConsultaSerializer(serializers.ModelSerializer):
+    #Nexted Relationship
+    medico = MedicoSerializer(read_only=True)
+
     class Meta:
         model = Consultas
         fields = (

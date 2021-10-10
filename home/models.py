@@ -31,7 +31,7 @@ class Medico(models.Model):
     def __str__(self):
         return "{}".format(self.nome)
 
-MY_CHOICES = (('14:00', '14:00'),
+HORARIOS = (('14:00', '14:00'),
               ('15:00', '15:00'),
               ('16:00', '16:00'),
               ('17:00', '17:00'),
@@ -42,7 +42,7 @@ class Agenda(models.Model):
     id_agenda = models.IntegerField(primary_key=True, editable=False)
     medico = models.ForeignKey(Medico,related_name='medico',on_delete=models.CASCADE, null=False, blank=False)
     dia = models.DateField(null=False, blank=False)
-    horas = MultiSelectField(choices=MY_CHOICES)
+    horas = MultiSelectField(choices=HORARIOS)
 
     class Meta:
         verbose_name = "Agenda"

@@ -56,10 +56,23 @@ class EspecialidadeViewSet(viewsets.ModelViewSet):
     queryset = Especialidade.objects.all()
     serializer_class = EspecialidadeSerializer
 
+    def get_queryset(self):
+        search = self.request.query_params.get('search')
+        if search is not None:
+            return self.queryset.filter(nome__contains=search)
+        return self.queryset.all()
+
 
 class MedicoViewSet(viewsets.ModelViewSet):
     queryset = Medico.objects.all()
     serializer_class = MedicoSerializer
+
+    def get_queryset(self):
+        search = self.request.query_params.get('search')
+        especialidade = self.request.query_params.getlist('especialidade')
+        if search is not None:
+            return self.queryset.filter(nome__contains=search).filter(especialidade__in=especialidade)
+        return self.queryset.all()
 
 
 class AgendaViewSet(viewsets.ModelViewSet):
@@ -77,3 +90,6 @@ class AgendaViewSet(viewsets.ModelViewSet):
 class ConsultasViewSet(viewsets.ModelViewSet):
     queryset = Consultas.objects.all()
     serializer_class = ConsultaSerializer
+
+    def get_queryset(self):
+        return self.queryset.filter(dia__gte=timezone.now()).order_by('dia')
