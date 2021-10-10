@@ -69,7 +69,8 @@ class AgendaViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['get'])
     def medico(self, request, pk=None):
         agenda = self.get_object()
-        serializer = MedicoSerializer(agenda.medico.get_object(), many=True)
+        query_set = Medico.objects.filter(nome=agenda.medico)
+        serializer = MedicoSerializer(query_set, many=True)
         return Response(serializer.data)
 
 
