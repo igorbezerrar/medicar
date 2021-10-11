@@ -49,6 +49,9 @@ cd medicar
 
 Você precisará de algumas bibliotecas para executar o projeto. As dependências estarão no arquivo [requeriments.txt](https://github.com/igorbezerra21/medicar/blob/master/requirements.txt) .
 
+| ATENÇÃO: Se você utiliza um ambiente virtual, certifique-se que o mesmo esteja ativado! <br/> Caso tenha dúvidas, acesse este [link](https://www.treinaweb.com.br/blog/criando-ambientes-virtuais-para-projetos-python-com-o-virtualenv) |
+| --- |
+
 Para instalar os requisitos do projeto, basta executar o seguinte comando no terminal:
 ```
 $ pip install -r requirements.txt
