@@ -35,42 +35,30 @@ Tabela de conteúdos
 
 ### Backend (API)
 
-* Para baixar o projeto siga as instruções abaixo:
+* Para baixar o projeto, clone-o diretamente do git executando o comando a seguir:
 
 ```
 git clone https://github.com/igorbezerra21/medicar.git
 
 ```
+Caso não esteja, entre na pasta `medicar`
+```
+cd medicar
+
+```
 
 Você precisará de algumas bibliotecas para executar o projeto. As dependências estarão no arquivo [requeriments.txt](https://github.com/igorbezerra21/medicar/blob/master/requirements.txt) .
 
-Para instalar os requisitos, basta executar no terminal:
-```
-$ pip install -r requeriments.txt
+| ATENÇÃO: Se você utiliza um ambiente virtual, certifique-se que o mesmo esteja ativado! <br/> Caso tenha dúvidas, acesse este [link](https://www.treinaweb.com.br/blog/criando-ambientes-virtuais-para-projetos-python-com-o-virtualenv) |
+| --- |
 
-```
-
-
-ATENÇÃO: Considere estar na mesma pasta que 'requirements.txt'.
-
-Se você usa ambiente virtual (recomendado):
-
-Instale o ambiente virtual:
-```
-$ python3 -m venv myvenv
-
-```
-
-Inicie o ambiente. Tenha o cuidado de colocar o caminho correto para o arquivo:
-```
-$ source ./myvenv/bin/activate
-
-```
-
-Após clonar o repositório, instale as dependências com o arquivo 'requirements.txt':
+Para instalar os requisitos do projeto, basta executar o seguinte comando no terminal:
 ```
 $ pip install -r requirements.txt
+
 ```
+
+ATENÇÃO: Considere estar na mesma pasta que 'requirements.txt'.
 
 <h2 id='iniciando'>Iniciando</h2>
 
