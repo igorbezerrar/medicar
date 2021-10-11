@@ -12,7 +12,7 @@ Tabela de conteúdos
    * [Tecnologias](#tecnologias)
    * [PIP](#pip)
    * [Iniciando](#iniciando)
-   * [Salvando dados](#salvando-dados)insomnia
+   * [Salvando dados](#salvando-dados)
    * [Requisições usando Insomnia](#insomnia)
    * [Link's](#links)
    * [Criador](#criador)
@@ -124,7 +124,7 @@ cadastre tambem dados sobre o **Médico**.
 Logo em seguida, será necessário criar uma **Agenda para o médico**
 ![Nova Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaagenda.png)
 
-<h2 id='insomnia'>Insomnia</h2>
+<h2 id='insomnia'>Requisições usando Insomnia</h2>
 
  
  
