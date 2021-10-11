@@ -12,7 +12,8 @@ Tabela de conteúdos
    * [Tecnologias](#tecnologias)
    * [PIP](#pip)
    * [Iniciando](#iniciando)
-   * [Como usar](#como-usar)
+   * [Salvando dados](#salvando-dados)insomnia
+   * [Requisições usando Insomnia](#insomnia)
    * [Link's](#links)
    * [Criador](#criador)
 <!--te-->
@@ -106,7 +107,7 @@ $ python manage.py runserver
 
 Se estiver usando, certifique-se de ter o ambiente virtual em execução e na mesma pasta do arquivo manage.py .
 
-<h2 id='como-usar'>Como usar</h2>
+<h2 id='salvando-dados'>Salvando dados</h2>
 
 Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questão [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
@@ -123,7 +124,7 @@ cadastre tambem dados sobre o **Médico**.
 Logo em seguida, será necessário criar uma **Agenda para o médico**
 ![Nova Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaagenda.png)
 
-
+<h2 id='insomnia'>Insomnia</h2>
 
  
  
