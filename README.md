@@ -5,14 +5,27 @@ Desafio: Medicar; Sistema para gestão de consultas em uma clínica médica
 Projeto realizado com Django e Rest Framework. Neste projeto, o desafio foi criar algo semelhante a um sistema de clínicas médicas.
 Onde o usuário administrador loga em sua conta, podendo cadastrar especialidades médicas, médicos, agendas e marcar consultas.
 
-<h2>Tecnologias</h2>
+Tabela de conteúdos
+=================
+<!--ts-->
+   * [Sobre](#Sobre)
+   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Tecnologias](#tecnologias)
+   * [PIP](#pip)
+   * [Iniciando](#iniciando)
+   * [Como usar](#como-usar)
+   * [Link's](#links)
+   * [Criador](#criador)
+<!--te-->
+
+<h2 id='tecnologias'>Tecnologias</h2>
 
 * Python versão 3.7.0
 * Django versão 2.2.0
 * Django Rest Framework versão 3.12.4
 * Django Multiselectfield versão 0.1.12
 
-<h2>Pip</h2>
+<h2 id='pip'>Pip</h2>
 
 Você precisará de algumas bibliotecas para executar o projeto. As dependências estarão no arquivo [requeriments.txt](https://github.com/igorbezerra21/medicar/blob/master/requirements.txt) .
 
@@ -34,7 +47,7 @@ Inicie o ambiente. Tenha o cuidado de colocar o caminho correto para o arquivo:
 Após clonar o repositório, instale as dependências com o arquivo 'requirements.txt':
 > $ pip install -r requirements.txt
 
-<h2>Iniciando</h2>
+<h2 id='iniciando'>Iniciando</h2>
 
 Considere as etapas anteriores da sessão PIP .
 Seu banco de dados deve ser sincronizado, para fazer isso, digite o comando no terminal:
@@ -63,9 +76,9 @@ Agora com o banco de dados conectado e todas as tabelas criadas, inicie o servid
 
 Se estiver usando, certifique-se de ter o ambiente virtual em execução e na mesma pasta do arquivo manage.py .
 
-<h2>Como usar</h2>
+<h2 id='como-usar'>Como usar</h2>
 
-Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questao [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
+Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questão [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
 Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
 Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário:
@@ -84,12 +97,12 @@ Logo em seguida, será necessário criar uma **Agenda para o médico**
 
  
  
-## Links
+<h2 id='link'>Link's</h2>
  
 - Repositório: https://github.com/igorbezerra21/medicar
      - Em caso de dúvidas ou sugestões, fique à vontade para entrar em contato e/ou solicitar **pull requests**. 
  
  
-## Criador
+<h2 id='criador'>Criador</h2>
  
 * **Igor Bezerra Reis**: @igorbezerra21 (https://github.com/igorbezerra21)
