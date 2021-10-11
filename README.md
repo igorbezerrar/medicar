@@ -80,8 +80,8 @@ $ python manage.py makemigrations
 ```
 
 * 3º
-
-Agora será necessário criar o usuario administrador, para isso, execute o seguinte comando no terminal:
+Ao fazer as migrações, alguns dados já serão importados, inclusive um admnistrador `root`<br/>
+Caso queira criar um usuario administrador, execute o seguinte comando no terminal:
 ```
 $ python manage.py createsuperuser
 
