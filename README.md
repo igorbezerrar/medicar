@@ -136,7 +136,7 @@ Em cada requisição, acesse a aba `Header` e adicione token do usuário.
 
 Faça esse procedimento para todas as requisições!
 
-<h4>GET Especialidades</h4>
+<h4 id='get-especialidade'>GET Especialidades</h4>
 
 Para consultar todas as especialidades basta usar a requisição `http://127.0.0.1:8000/especialidades/` 
 
@@ -146,7 +146,7 @@ Para procurar uma especialidade específica, basta passar o paramêtro `search` 
 
 ![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroespecialidade.png)
 
-<h4>GET Médicos</h4>
+<h4 id='get-medicos'>GET Médicos</h4>
 
 Para consultar todos os médicos, basta usar a requisição `http://127.0.0.1:8000/medicos/` 
 
@@ -156,14 +156,14 @@ Para procurar um médico específico, você pode utilizar os paramêtros `search
 
 ![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
 
-<h4>GET Consultas</h4>
+<h4 id='get-consultas'>GET Consultas</h4>
 
 Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` <br/>
 OBS: Será mostrado apenas as consultas que pertecem ao usuário logado!
 
 ![GET Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasconsultas.png)
 
-<h4>GET Agendas</h4>
+<h4 id='get-agendas'>GET Agendas</h4>
 
 Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` 
 
@@ -181,13 +181,13 @@ Por `especialidade` -> `http://127.0.0.1:8000/agenda/?especialidade=2` <br/>
 Por `medico` & `especialidade` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2` <br/>
 Por `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?data_inicio=2021-10-20&data_final=2021-10-31` 
 
-<h4>POST Consulta</h4>
+<h4 id='post-consulta'>POST Consulta</h4>
 
 Para marcar uma nova consulta, você usará uma requisicão do tipo `POST` passando o json com o `id_agenda`, junto com o `horario` disponível na respectiva agenda:
 
 ![POST Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/novaconsulta.png)
 
-<h4>DELETE Consulta</h4>
+<h4 id='delete-consulta'>DELETE Consulta</h4>
 
 Para desmarcar uma consulta, envie uma requisição DELETE passando o id da consulta:<br/>
 Só será possível desmarcar uma consulta se o usuario da requisição for o mesmo que a marcou!
