@@ -35,10 +35,15 @@ Tabela de conteúdos
 
 ### Backend (API)
 
-* Para baixar o projeto siga as instruções abaixo:
+* Para baixar o projeto, clone-o diretamente do git executando o comando a seguir:
 
 ```
 git clone https://github.com/igorbezerra21/medicar.git
+
+```
+Caso não esteja, entre na pasta `medicar`
+```
+cd medicar
 
 ```
 
