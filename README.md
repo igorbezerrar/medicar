@@ -65,6 +65,8 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 <h2>Como usar</h2>
 
+Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questao [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
+
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
@@ -72,23 +74,5 @@ cadastre tambem dados sobre o **Médico**.
 ![Novo Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novamedico.png)
 
 Logo em seguida, será necessário criar uma **Agenda para o médico**
+![Nova Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaagenda.png)
 
-Foram seguidas todas as orientações repassadas para o projeto em questao [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
-
-Upon accessing the server link, you will see the *HOME* page for unlogged in users.  
-
-
-Create an account in the respective session. Enter user and investor data.  
-![Criar conta](https://github.com/Jackie098/my-wallet/blob/master/images-readme/02.new_account_form.png)
-
-Then, *LOGIN* with the registered user data.  
-![Login de usuário](https://github.com/Jackie098/my-wallet/blob/master/images-readme/03.login_view.png)
-
-Now we can view *HOME* for logged in users. Note the new options released in *nav-bar* as much as the summary of operations and investor information.  
-![Home para usuários logados](https://github.com/Jackie098/my-wallet/blob/master/images-readme/04.home_logged.png)
-
-With the user logged in, register your operations and specify whether it is a purchase or sale.  
-![Registro de Operações](https://github.com/Jackie098/my-wallet/blob/master/images-readme/05.new_operation.png)
-
-You can also view your operations (their history).  
-![Histórico de Operações](https://github.com/Jackie098/my-wallet/blob/master/images-readme/06.history_operations.png)
