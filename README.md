@@ -99,7 +99,7 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 <h2 id='salvando-dados'>Salvando dados</h2>
 
-Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questão [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
+Neste projeto, foram seguidas todas as orientações repassadas através do [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
 Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
 Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário:
