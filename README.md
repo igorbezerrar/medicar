@@ -126,14 +126,16 @@ Logo em seguida, será necessário criar uma **Agenda para o médico**
 
 <h2 id='insomnia'>Requisições usando Insomnia</h2>
 
-Abaixa, nesta tabela, há link's para o download de cada requisição configurada para uso no Insomnia:
+Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json. Importe o mesmo pelo Insomnia, será criado um Workspace com
+todas as requicições configuradas. Seu único trabalho será o de adicionar o Token gerado para o usuario!
 
 | Requisição | Link |
 | --- | --- |
-| `Todas requisições` | ![Link](`https://github.com/igorbezerra21/imagens_readme.md/blob/main/Insomnia_2021-10-11.json`) |
+| `Todas requisições` | Link https://github.com/igorbezerra21/imagens_readme.md/blob/main/Insomnia_2021-10-11.json |
 
+<h4>Exemplo substituindo token</h4>
+![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
- 
  
 <h2 id='link'>Link's</h2>
  
