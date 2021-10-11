@@ -53,17 +53,23 @@ Você precisará de algumas bibliotecas para executar o projeto. As dependência
 | --- |
 
 <h4>Instalando e ativando um ambiente virtual</h4>
+
 * 1º - Instalando
+
 ```
 $ pip install virtualenv
 
 ```
+
 * 2º - Criando ambiente
+
 ```
 $ virtualenv nome_da_virtualenv
 
 ```
+
 * 3º - Ativando ambiente (Windows)
+
 ```
 $ nome_da_virtualenv/Scripts/Activate
 
