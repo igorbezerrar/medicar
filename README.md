@@ -183,11 +183,11 @@ Você poderá filtrar as agendas disponiveis utilizando alguns filtros: Por `med
 
 ![GET Filtro Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroagenda.png)
 
-Você poderá usar os quatros juntos, como no exemplo acima, como também separadamente:
-Por `medico` -> `http://127.0.0.1:8000/agenda/?medico=2`
-Por `especialidade` -> `http://127.0.0.1:8000/agenda/?especialidade=2`
-Por `medico` & `especialidade` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2`
-Por `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?data_inicio=2021-10-20&data_final=2021-10-31`
+Você poderá usar os quatros juntos, como no exemplo acima, como também separadamente:<br/>
+Por `medico` -> `http://127.0.0.1:8000/agenda/?medico=2` <br/>
+Por `especialidade` -> `http://127.0.0.1:8000/agenda/?especialidade=2` <br/>
+Por `medico` & `especialidade` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2` <br/>
+Por `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?data_inicio=2021-10-20&data_final=2021-10-31` 
 
  
 <h2 id='link'>Link's</h2>
