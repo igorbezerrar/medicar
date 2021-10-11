@@ -32,7 +32,7 @@ Inicie o ambiente. Tenha o cuidado de colocar o caminho correto para o arquivo:
 > $ source ./myvenv/bin/activate
 
 Após clonar o repositório, instale as dependências com o arquivo 'requirements.txt':
-> $ pip install -r requisitos.txt
+> $ pip install -r requirements.txt
 
 <h2>Iniciando</h2>
 
@@ -50,6 +50,14 @@ Você deve estar no mesmo nível de diretório do arquivo manage.py . Se houver 
 
 > $ python manage.py migrate
 
+3º
+
+Agora será necessário criar o usuario administrador, para isso, execute o seguinte comando no terminal:
+
+> $ python manage.py createsuperuser
+
+Será solicitado alguns dados, os mais importante é **Username** (nome de usuario) e **Password** (senha).
+
 Agora com o banco de dados conectado e todas as tabelas criadas, inicie o servidor:
 > $ python manage.py runserver
 
@@ -57,10 +65,18 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 <h2>Como usar</h2>
 
+Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
+![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
+
+cadastre tambem dados sobre o **Médico**.
+![Novo Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novomedico.png)
+
+Logo em seguida, será necessário criar uma **Agenda para o médico**
+
 Foram seguidas todas as orientações repassadas para o projeto em questao [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
 Upon accessing the server link, you will see the *HOME* page for unlogged in users.  
-![Home para usuários não logados](https://github.com/Jackie098/my-wallet/blob/master/images-readme/01.home_without_login.png)
+
 
 Create an account in the respective session. Enter user and investor data.  
 ![Criar conta](https://github.com/Jackie098/my-wallet/blob/master/images-readme/02.new_account_form.png)
