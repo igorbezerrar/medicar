@@ -68,10 +68,17 @@ $ virtualenv nome_da_virtualenv
 
 ```
 
-* 3º - Ativando ambiente (Windows)
+* 3º - Ativando ambiente 
 
+No Windows
 ```
 $ nome_da_virtualenv/Scripts/Activate
+
+```
+
+No Linux
+```
+$ source nome_da_virtualenv/bin/activate
 
 ```
 <h4>Instalando requisitos do projeto</h4>
