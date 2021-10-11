@@ -66,9 +66,9 @@ $ python3 -m venv myvenv
 
 ```
 
-Inicie o ambiente. Tenha o cuidado de colocar o caminho correto para o arquivo:
+Inicie o ambiente (Windows). Tenha o cuidado de colocar o caminho correto para o arquivo:
 ```
-$ source ./myvenv/bin/activate
+$ myvenv\Scripts\activate.bat
 
 ```
 
