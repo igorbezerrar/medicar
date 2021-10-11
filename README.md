@@ -122,6 +122,9 @@ Na **Interface Administrativa do Django**, crie um Token o vinculando com seu us
 
 ![Novo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/token.png)
 
+O Token pode ser acessado nessa aba:
+![Resultado Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/tokengerado.png)
+
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
@@ -141,7 +144,9 @@ todas as requisições configuradas. Seu único trabalho será o de adicionar o 
 | --- | --- |
 | `Todas requisições` | Link https://raw.githubusercontent.com/igorbezerra21/imagens_readme.md/main/Insomnia_2021-10-11.json |
 
-<h4>Substituindo token</h4>
+<h4>Adicionando o Token</h4>
+
+Em cada requisição, acesse a aba `Header` e adicione token do usuário.
 
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
