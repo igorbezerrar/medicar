@@ -130,10 +130,7 @@ Abaixa, nesta tabela, há link's para o download de cada requisição configurad
 
 | Requisição | Link |
 | --- | --- |
-| `start` | Alias for running `docs-serve` |
-| `docs-serve` | Starts a local Hugo server |
-| `pages` | Generates permalink pages for each icon with template Markdown |
-| `icons` | Processes and optimizes SVGs in `icons` directory |
+| `Todas requisições` | Link `https://github.com/igorbezerra21/imagens_readme.md/blob/main/Insomnia_2021-10-11.json` |
 
 
  
