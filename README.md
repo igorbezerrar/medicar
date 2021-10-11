@@ -111,8 +111,9 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questão [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
-Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
-Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário:
+<p id='novo_token'> Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
+Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário: </p>
+
 ![Novo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/token.png)
 
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
@@ -126,8 +127,9 @@ Logo em seguida, será necessário criar uma **Agenda para o médico**
 
 <h2 id='insomnia'>Requisições usando Insomnia</h2>
 
-Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json. Importe o mesmo pelo Insomnia, será criado um Workspace com
-todas as requicições configuradas. Seu único trabalho será o de adicionar o Token gerado para o usuario!
+Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json. 
+Acesse e salve o arquivo, logo em seguida importe o mesmo pelo Insomnia, será criado um Workspace com
+todas as requicições configuradas. Seu único trabalho será o de adicionar o [Token gerado](#novo_token) para o usuario! 
 
 | Requisição | Link |
 | --- | --- |
