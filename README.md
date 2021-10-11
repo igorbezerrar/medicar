@@ -133,7 +133,8 @@ todas as requicições configuradas. Seu único trabalho será o de adicionar o 
 | --- | --- |
 | `Todas requisições` | Link https://github.com/igorbezerra21/imagens_readme.md/blob/main/Insomnia_2021-10-11.json |
 
-<h4>Exemplo substituindo token</h4>
+<h4>Substituindo token</h4>
+
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
  
