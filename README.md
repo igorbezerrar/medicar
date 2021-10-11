@@ -49,33 +49,13 @@ cd medicar
 
 Você precisará de algumas bibliotecas para executar o projeto. As dependências estarão no arquivo [requeriments.txt](https://github.com/igorbezerra21/medicar/blob/master/requirements.txt) .
 
-Para instalar os requisitos, basta executar no terminal:
+Para instalar os requisitos do projeto, basta executar o seguinte comando no terminal:
 ```
 $ pip install -r requirements.txt
 
 ```
-
 
 ATENÇÃO: Considere estar na mesma pasta que 'requirements.txt'.
-
-Se você usa ambiente virtual (recomendado):
-
-Instale o ambiente virtual:
-```
-$ python3 -m venv myvenv
-
-```
-
-Inicie o ambiente (Windows). Tenha o cuidado de colocar o caminho correto para o arquivo:
-```
-$ myvenv\Scripts\activate.bat
-
-```
-
-Após clonar o repositório, instale as dependências com o arquivo 'requirements.txt':
-```
-$ pip install -r requirements.txt
-```
 
 <h2 id='iniciando'>Iniciando</h2>
 
