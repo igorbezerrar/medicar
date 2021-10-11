@@ -76,3 +76,16 @@ cadastre tambem dados sobre o **Médico**.
 Logo em seguida, será necessário criar uma **Agenda para o médico**
 ![Nova Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaagenda.png)
 
+
+
+ 
+ 
+## Links
+ 
+- Repositório: https://github.com/igorbezerra21/medicar
+     - Em caso de dúvidas ou sugestões, fique à vontade para entrar em contato e/ou solicitar **pull requests**. 
+ 
+ 
+## Criador
+ 
+* **Igor Bezerra Reis**: @igorbezerra21 (https://github.com/igorbezerra21)
