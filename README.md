@@ -30,7 +30,7 @@ Tabela de conteúdos
 * Django versão 2.2.0
 * Django Rest Framework versão 3.12.4
 * Django Multiselectfield versão 0.1.12
-
+ 
 <h2 id='pip'>Pip</h2>
 
 ### Backend (API)
@@ -75,23 +75,19 @@ $ pip install -r requirements.txt
 <h2 id='iniciando'>Iniciando</h2>
 
 Considere as etapas anteriores da sessão PIP .
-Seu banco de dados deve ser sincronizado, para fazer isso, digite o comando no terminal:
-```
-$ python manage.py migrate
+Seu banco de dados deve ser sincronizado, para fazer isso, digite os seguintes comandos no terminal:<br/>
 
-```
-
-Você deve estar no mesmo nível de diretório do arquivo manage.py . Se houver algum problema, tente executar os dois comandos abaixo no terminal:
+OBS: Você deve estar no mesmo nível de diretório do arquivo manage.py!
 
 * 1º
 ```
-$ python manage.py makemigrations
+$ python manage.py migrate
 
 ```
 
 * 2º
 ```
-$ python manage.py migrate
+$ python manage.py makemigrations
 
 ```
 
