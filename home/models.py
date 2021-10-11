@@ -90,8 +90,6 @@ class Consultas(models.Model):
         unique_together = ['dia', 'horario', 'usuario']
 
 
-
-
     def __str__(self):
         return "dia={}, horario={}, data_agendamento={}, medico={}".format(
                 self.dia,self.horario,self.data_agendamento,self.medico)
