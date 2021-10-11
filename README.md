@@ -14,6 +14,12 @@ Tabela de conteúdos
    * [Iniciando](#iniciando)
    * [Salvando dados](#salvando-dados)
    * [Requisições usando Insomnia](#insomnia)
+      * [GET Especialidade](#get-especialidade)
+      * [GET Medicos](#get-medicos)
+      * [GET Consultas](#get-consultas)
+      * [GET Agendas](#get-agendas)
+      * [POST Nova Consulta](#post-consulta)
+      * [DELETE Consulta](#delete-consulta)
    * [Link's](#links)
    * [Criador](#criador)
 <!--te-->
@@ -138,6 +144,26 @@ todas as requisições configuradas. Seu único trabalho será o de adicionar o 
 <h4>Substituindo token</h4>
 
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
+
+<h4>GET Especialidades</h4>
+
+Para consultar todas as especialidades basta usar a requisição `http://127.0.0.1:8000/especialidades/` 
+
+![GET Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasespecialidades.png)
+
+Para procurar uma especialidade específica, basta passar o paramêtro `search` -> `http://127.0.0.1:8000/especialidades/?search=car`
+
+![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroespecialidade.png)
+
+<h4>GET Médicos</h4>
+
+Para consultar todas as especialidades basta usar a requisição `http://127.0.0.1:8000/medicos/` 
+
+![GET Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todososmedicos.png)
+
+Para procurar um médico específico, você pode utilizar os paramêtros `search` e `especialidade` -> `http://127.0.0.1:8000/medicos/?search=igor&especialidade=2&especialidade=1`
+
+![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
 
  
 <h2 id='link'>Link's</h2>
