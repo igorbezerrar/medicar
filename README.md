@@ -52,6 +52,23 @@ Você precisará de algumas bibliotecas para executar o projeto. As dependência
 | ATENÇÃO: Se você utiliza um ambiente virtual, certifique-se que o mesmo esteja ativado! <br/> Caso tenha dúvidas, acesse este [link](https://www.treinaweb.com.br/blog/criando-ambientes-virtuais-para-projetos-python-com-o-virtualenv) |
 | --- |
 
+<h4>Instalando e ativando um ambiente virtual</h4>
+* 1º - Instalando
+```
+$ pip install virtualenv
+
+```
+* 2º - Criando ambiente
+```
+$ virtualenv nome_da_virtualenv
+
+```
+* 3º - Ativando ambiente (Windows)
+```
+$ nome_da_virtualenv/Scripts/Activate
+
+```
+
 Para instalar os requisitos do projeto, basta executar o seguinte comando no terminal:
 ```
 $ pip install -r requirements.txt
