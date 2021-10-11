@@ -147,5 +147,5 @@ todas as requicições configuradas. Seu único trabalho será o de adicionar o 
  
  
 <h2 id='criador'>Criador</h2>
- 
+  
 * **Igor Bezerra Reis**: @igorbezerra21 (https://github.com/igorbezerra21)
