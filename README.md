@@ -165,6 +165,30 @@ Para procurar um médico específico, você pode utilizar os paramêtros `search
 
 ![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
 
+<h4>GET Consultas</h4>
+
+Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` 
+OBS: Será mostrado apenas as consultas que pertecem ao usuário logado!
+
+![GET Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasconsultas.png)
+
+<h4>GET Agendas</h4>
+
+Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` 
+
+![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
+
+Você poderá filtrar as agendas disponiveis utilizando alguns filtros: Por `medico` e/ou `especialidade`; Como tambem por intervalo de data,
+`data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2&data_inicio=2021-10-20&data_final=2021-10-31`
+
+![GET Filtro Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroagenda.png)
+
+Você poderá usar os quatros juntos, como no exemplo acima, como também separadamente:
+Por `medico` -> `http://127.0.0.1:8000/agenda/?medico=2`
+Por `especialidade` -> `http://127.0.0.1:8000/agenda/?especialidade=2`
+Por `medico` & `especialidade` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2`
+Por `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?data_inicio=2021-10-20&data_final=2021-10-31`
+
  
 <h2 id='link'>Link's</h2>
  
