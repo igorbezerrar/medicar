@@ -1,16 +1,11 @@
-from datetime import datetime
-
 from django.http import JsonResponse
 from django.utils import timezone
 
-from rest_framework import viewsets, mixins
-from rest_framework.decorators import action, api_view
+from rest_framework import viewsets
+from rest_framework.decorators import action
 from rest_framework.response import Response
-from django.contrib.auth.models import User
-from django.core.exceptions import ValidationError
 
 
-from rest_framework import generics
 from .models import Consultas, Agenda,Medico, Especialidade
 from .serializers import ConsultaSerializer,AgendaSerializer,EspecialidadeSerializer,MedicoSerializer
 

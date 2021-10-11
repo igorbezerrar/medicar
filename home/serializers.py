@@ -1,5 +1,4 @@
 from rest_framework import serializers, fields
-from rest_framework.validators import UniqueTogetherValidator
 
 from .models import Especialidade, Medico, Agenda, Consultas, HORARIOS
 

@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     'django_filters',
     'rest_framework',
-    'sortedm2m',
     'multiselectfield',
     'rest_framework.authtoken',
 
