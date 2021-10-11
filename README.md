@@ -76,19 +76,19 @@ $ python manage.py migrate
 
 Você deve estar no mesmo nível de diretório do arquivo manage.py . Se houver algum problema, tente executar os dois comandos abaixo no terminal:
 
-1º
+* 1º
 ```
 $ python manage.py makemigrations
 
 ```
 
-2º
+* 2º
 ```
 $ python manage.py migrate
 
 ```
 
-3º
+* 3º
 
 Agora será necessário criar o usuario administrador, para isso, execute o seguinte comando no terminal:
 ```
