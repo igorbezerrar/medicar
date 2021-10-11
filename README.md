@@ -157,7 +157,7 @@ Para procurar uma especialidade específica, basta passar o paramêtro `search` 
 
 <h4>GET Médicos</h4>
 
-Para consultar todas as especialidades basta usar a requisição `http://127.0.0.1:8000/medicos/` 
+Para consultar todos os médicos, basta usar a requisição `http://127.0.0.1:8000/medicos/` 
 
 ![GET Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todososmedicos.png)
 
