@@ -111,8 +111,8 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questão [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
-<p id='novo_token'> Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
-Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário: </p>
+<p id='novo_token'> Antes de qualquer coisa... </p> Para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
+Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário:
 
 ![Novo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/token.png)
 
