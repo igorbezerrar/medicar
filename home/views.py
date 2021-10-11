@@ -28,9 +28,11 @@ class MedicoViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         search = self.request.query_params.get('search')
         especialidade = self.request.query_params.getlist('especialidade')
-        print(search, especialidade)
-        if especialidade:
+
+        if especialidade and search:
             return self.queryset.filter(nome__contains=search).filter(especialidade__in=especialidade)
+        if especialidade:
+            return self.queryset.filter(especialidade__in=especialidade)
         if search is not None:
             return self.queryset.filter(nome__contains=search)
         return self.queryset.all()
