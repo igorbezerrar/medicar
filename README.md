@@ -150,15 +150,15 @@ Para procurar uma especialidade específica, basta passar o paramêtro `search` 
 
 Para consultar todos os médicos, basta usar a requisição `http://127.0.0.1:8000/medicos/` 
 
-![GET Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todososmedicos.png)
+![GET Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todososmedicos.png)
 
 Para procurar um médico específico, você poderá utilizar os paramêtros `search` e/ou `especialidade` -> `http://127.0.0.1:8000/medicos/?search=igor&especialidade=2&especialidade=1` <br/>
 
 Você poderá usar os filtros juntos ou separados:<br/>
-Por `medico`'s -> `http://127.0.0.1:8000/agenda/?medico=1&medico=2` <br/>
-Por `especialidade`'s -> `http://127.0.0.1:8000/agenda/?especialidade=2&especialidade=4` <br/>
+Por `medico`'s -> `http://127.0.0.1:8000/medicos/?medico=1&medico=2` <br/>
+Por `especialidade`'s -> `http://127.0.0.1:8000/medicos/?especialidade=2&especialidade=4` <br/>
 
-![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
+![GET Filtro Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
 
 <h4 id='get-consultas'>GET Consultas</h4>
 
