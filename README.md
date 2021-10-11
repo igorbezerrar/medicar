@@ -52,6 +52,30 @@ Você precisará de algumas bibliotecas para executar o projeto. As dependência
 | ATENÇÃO: Se você utiliza um ambiente virtual, certifique-se que o mesmo esteja ativado! <br/> Caso tenha dúvidas, acesse este [link](https://www.treinaweb.com.br/blog/criando-ambientes-virtuais-para-projetos-python-com-o-virtualenv) |
 | --- |
 
+<h4>Instalando e ativando um ambiente virtual</h4>
+
+* 1º - Instalando
+
+```
+$ pip install virtualenv
+
+```
+
+* 2º - Criando ambiente
+
+```
+$ virtualenv nome_da_virtualenv
+
+```
+
+* 3º - Ativando ambiente (Windows)
+
+```
+$ nome_da_virtualenv/Scripts/Activate
+
+```
+<h4>Instalando requisitos do projeto</h4>
+
 Para instalar os requisitos do projeto, basta executar o seguinte comando no terminal:
 ```
 $ pip install -r requirements.txt
@@ -80,8 +104,8 @@ $ python manage.py makemigrations
 ```
 
 * 3º
-
-Agora será necessário criar o usuario administrador, para isso, execute o seguinte comando no terminal:
+Ao fazer as migrações, alguns dados já serão importados, inclusive um admnistrador `root`<br/>
+Caso queira criar um usuario administrador, execute o seguinte comando no terminal:
 ```
 $ python manage.py createsuperuser
 
@@ -99,7 +123,7 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 <h2 id='salvando-dados'>Salvando dados</h2>
 
-Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questão [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
+Neste projeto, foram seguidas todas as orientações repassadas através do [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
 Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
 Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário:
@@ -112,7 +136,7 @@ O Token pode ser acessado nessa aba:
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
-cadastre tambem dados sobre o **Médico**.
+Cadastre tambem dados sobre o **Médico**.
 ![Novo Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novamedico.png)
 
 Logo em seguida, será necessário criar uma **Agenda para o médico**
@@ -122,7 +146,7 @@ Logo em seguida, será necessário criar uma **Agenda para o médico**
 
 Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json. 
 Acesse e salve o arquivo, logo em seguida importe o mesmo pelo Insomnia, será criado um Workspace com
-todas as requisições configuradas. Seu único trabalho será o de adicionar o [Token gerado](#salvando-dados) para o usuario! 
+todas as requisições configuradas. Este Workspace já contém o Token para o usuário `root`.
 
 | Requisição | Link |
 | --- | --- |
@@ -130,13 +154,13 @@ todas as requisições configuradas. Seu único trabalho será o de adicionar o 
 
 <h4>Adicionando o Token</h4>
 
-Em cada requisição, acesse a aba `Header` e adicione token do usuário.
+Para adicionar/substituir o [Token gerado](#salvando-dados) para seu usuário, em cada requisição, acesse a aba `Header` e o adicione.
 
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
 Faça esse procedimento para todas as requisições!
 
-<h4>GET Especialidades</h4>
+<h4 id='get-especialidade'>GET Especialidades</h4>
 
 Para consultar todas as especialidades basta usar a requisição `http://127.0.0.1:8000/especialidades/` 
 
@@ -146,31 +170,36 @@ Para procurar uma especialidade específica, basta passar o paramêtro `search` 
 
 ![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroespecialidade.png)
 
-<h4>GET Médicos</h4>
+<h4 id='get-medicos'>GET Médicos</h4>
 
 Para consultar todos os médicos, basta usar a requisição `http://127.0.0.1:8000/medicos/` 
 
-![GET Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todososmedicos.png)
+![GET Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todososmedicos.png)
 
-Para procurar um médico específico, você pode utilizar os paramêtros `search` e `especialidade` -> `http://127.0.0.1:8000/medicos/?search=igor&especialidade=2&especialidade=1`
+Para procurar um médico específico, você poderá utilizar os paramêtros `search` e/ou `especialidade` -> `http://127.0.0.1:8000/medicos/?search=igor&especialidade=2&especialidade=1` <br/>
 
-![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
+Você poderá usar os filtros juntos ou separados:<br/>
+Por `medico`'s -> `http://127.0.0.1:8000/medicos/?medico=1&medico=2` <br/>
+Por `especialidade`'s -> `http://127.0.0.1:8000/medicos/?especialidade=2&especialidade=4` <br/>
 
-<h4>GET Consultas</h4>
+![GET Filtro Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
+
+<h4 id='get-consultas'>GET Consultas</h4>
 
 Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` <br/>
-OBS: Será mostrado apenas as consultas que pertecem ao usuário logado!
+OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas elas estão ordenadas por dia.
 
 ![GET Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasconsultas.png)
 
-<h4>GET Agendas</h4>
+<h4 id='get-agendas'>GET Agendas</h4>
 
-Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` 
+Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` <br/>
+As agendas também estão organizadas por dia.
 
 ![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
 
 Você poderá filtrar as agendas disponiveis utilizando alguns filtros: Por `medico` e/ou `especialidade`;<br/> 
-Como tambem por intervalo de data: <br/>
+Como também por intervalo de data: <br/>
 `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2&data_inicio=2021-10-20&data_final=2021-10-31`
 
 ![GET Filtro Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroagenda.png)
@@ -181,13 +210,13 @@ Por `especialidade` -> `http://127.0.0.1:8000/agenda/?especialidade=2` <br/>
 Por `medico` & `especialidade` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2` <br/>
 Por `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?data_inicio=2021-10-20&data_final=2021-10-31` 
 
-<h4>POST Consulta</h4>
+<h4 id='post-consulta'>POST Consulta</h4>
 
 Para marcar uma nova consulta, você usará uma requisicão do tipo `POST` passando o json com o `id_agenda`, junto com o `horario` disponível na respectiva agenda:
 
 ![POST Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/novaconsulta.png)
 
-<h4>DELETE Consulta</h4>
+<h4 id='delete-consulta'>DELETE Consulta</h4>
 
 Para desmarcar uma consulta, envie uma requisição DELETE passando o id da consulta:<br/>
 Só será possível desmarcar uma consulta se o usuario da requisição for o mesmo que a marcou!
