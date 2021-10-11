@@ -131,7 +131,7 @@ todas as requicições configuradas. Seu único trabalho será o de adicionar o 
 
 | Requisição | Link |
 | --- | --- |
-| `Todas requisições` | Link https://github.com/igorbezerra21/imagens_readme.md/blob/main/Insomnia_2021-10-11.json |
+| `Todas requisições` | Link https://raw.githubusercontent.com/igorbezerra21/imagens_readme.md/main/Insomnia_2021-10-11.json |
 
 <h4>Substituindo token</h4>
 
