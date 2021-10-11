@@ -112,7 +112,7 @@ O Token pode ser acessado nessa aba:
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
-cadastre tambem dados sobre o **Médico**.
+Cadastre tambem dados sobre o **Médico**.
 ![Novo Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novamedico.png)
 
 Logo em seguida, será necessário criar uma **Agenda para o médico**
@@ -122,7 +122,7 @@ Logo em seguida, será necessário criar uma **Agenda para o médico**
 
 Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json. 
 Acesse e salve o arquivo, logo em seguida importe o mesmo pelo Insomnia, será criado um Workspace com
-todas as requisições configuradas. Seu único trabalho será o de adicionar o [Token gerado](#salvando-dados) para o usuario! 
+todas as requisições configuradas. Este Workspace já contém o Token para o usuário `root`.
 
 | Requisição | Link |
 | --- | --- |
@@ -130,7 +130,7 @@ todas as requisições configuradas. Seu único trabalho será o de adicionar o 
 
 <h4>Adicionando o Token</h4>
 
-Em cada requisição, acesse a aba `Header` e adicione token do usuário.
+Para adicionar/substituir o [Token gerado](#salvando-dados) para seu usuário, em cada requisição, acesse a aba `Header` e o adicione.
 
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
@@ -152,25 +152,30 @@ Para consultar todos os médicos, basta usar a requisição `http://127.0.0.1:80
 
 ![GET Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todososmedicos.png)
 
-Para procurar um médico específico, você pode utilizar os paramêtros `search` e `especialidade` -> `http://127.0.0.1:8000/medicos/?search=igor&especialidade=2&especialidade=1`
+Para procurar um médico específico, você poderá utilizar os paramêtros `search` e/ou `especialidade` -> `http://127.0.0.1:8000/medicos/?search=igor&especialidade=2&especialidade=1` <br/>
+
+Você poderá usar os filtros juntos ou separados:<br/>
+Por `medico`'s -> `http://127.0.0.1:8000/agenda/?medico=1&medico=2` <br/>
+Por `especialidade`'s -> `http://127.0.0.1:8000/agenda/?especialidade=2&especialidade=4` <br/>
 
 ![GET Filtro Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtromedico.png)
 
 <h4 id='get-consultas'>GET Consultas</h4>
 
 Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` <br/>
-OBS: Será mostrado apenas as consultas que pertecem ao usuário logado!
+OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas elas estão ordenadas por dia.
 
 ![GET Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasconsultas.png)
 
 <h4 id='get-agendas'>GET Agendas</h4>
 
-Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` 
+Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` <br/>
+As agendas também estão organizadas por dia.
 
 ![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
 
 Você poderá filtrar as agendas disponiveis utilizando alguns filtros: Por `medico` e/ou `especialidade`;<br/> 
-Como tambem por intervalo de data: <br/>
+Como também por intervalo de data: <br/>
 `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2&data_inicio=2021-10-20&data_final=2021-10-31`
 
 ![GET Filtro Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroagenda.png)
