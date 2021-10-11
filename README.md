@@ -145,6 +145,8 @@ todas as requisições configuradas. Seu único trabalho será o de adicionar o 
 
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
+Faça esse procedimento para todas as requisições!
+
 <h4>GET Especialidades</h4>
 
 Para consultar todas as especialidades basta usar a requisição `http://127.0.0.1:8000/especialidades/` 
@@ -167,7 +169,7 @@ Para procurar um médico específico, você pode utilizar os paramêtros `search
 
 <h4>GET Consultas</h4>
 
-Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` 
+Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` <br/>
 OBS: Será mostrado apenas as consultas que pertecem ao usuário logado!
 
 ![GET Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasconsultas.png)
@@ -178,7 +180,8 @@ Todas as agendas disponivéis poderão ser acessadas a partir da requisição `h
 
 ![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
 
-Você poderá filtrar as agendas disponiveis utilizando alguns filtros: Por `medico` e/ou `especialidade`; Como tambem por intervalo de data,
+Você poderá filtrar as agendas disponiveis utilizando alguns filtros: Por `medico` e/ou `especialidade`;<br/> 
+Como tambem por intervalo de data: <br/>
 `data_inicio` & `data_final` -> `http://127.0.0.1:8000/agenda/?medico=2&especialidade=2&data_inicio=2021-10-20&data_final=2021-10-31`
 
 ![GET Filtro Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/filtroagenda.png)
@@ -197,7 +200,8 @@ Para marcar uma nova consulta, você usará uma requisicão do tipo `POST` passa
 
 <h4>DELETE Consulta</h4>
 
-Para desmarcar uma consulta, enviará uma requisição DELETE:
+Para desmarcar uma consulta, envie uma requisição DELETE passando o id da consulta:
+`http://127.0.0.1:8000/consultas/5`
 
 ![DELETE Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/deletarconsulta.png)
 
