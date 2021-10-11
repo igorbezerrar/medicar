@@ -67,6 +67,10 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 Neste projeto, foram seguidas todas as orientações repassadas para o projeto em questao [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
+Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
+Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário:
+![Novo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/token.png)
+
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
