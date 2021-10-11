@@ -15,11 +15,11 @@ class MedicoAdmin(admin.ModelAdmin):
 
 @admin.register(Agenda)
 class AgendaAdmin(admin.ModelAdmin):
-    list_display = ('id_agenda', 'medico', 'dia', 'horas')
+    list_display = ('id_agenda', 'medico', 'dia', 'horarios')
 
 
 @admin.register(Consultas)
 class ConsultaAdmin(admin.ModelAdmin):
-    list_display = ('id_consulta', 'dia', 'horario','data_agendamento', 'medico')
+    list_display = ('id_consulta', 'dia', 'horario','data_agendamento', 'medico', 'usuario')
 
 
