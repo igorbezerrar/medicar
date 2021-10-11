@@ -14,7 +14,7 @@ Onde o usuário administrador loga em sua conta, podendo cadastrar especialidade
 
 <h2>Pip</h2>
 
-Você precisará de algumas bibliotecas para executar o projeto. As inscrições estarão no arquivo [requeriments.txt](https://github.com/igorbezerra21/medicar/blob/master/requirements.txt) .
+Você precisará de algumas bibliotecas para executar o projeto. As dependências estarão no arquivo [requeriments.txt](https://github.com/igorbezerra21/medicar/blob/master/requirements.txt) .
 
 Para instalar os requisitos, basta executar no terminal:
 
