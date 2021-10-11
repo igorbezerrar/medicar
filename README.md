@@ -126,7 +126,15 @@ Logo em seguida, será necessário criar uma **Agenda para o médico**
 
 <h2 id='insomnia'>Requisições usando Insomnia</h2>
 
-![Insomnia](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia.svg)
+Abaixa, nesta tabela, há link's para o download de cada requisição configurada para uso no Insomnia:
+
+| Requisição | Link |
+| --- | --- |
+| `start` | Alias for running `docs-serve` |
+| `docs-serve` | Starts a local Hugo server |
+| `pages` | Generates permalink pages for each icon with template Markdown |
+| `icons` | Processes and optimizes SVGs in `icons` directory |
+
 
  
  
