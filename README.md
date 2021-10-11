@@ -189,7 +189,9 @@ Para marcar uma nova consulta, você usará uma requisicão do tipo `POST` passa
 
 <h4>DELETE Consulta</h4>
 
-Para desmarcar uma consulta, envie uma requisição DELETE passando o id da consulta:
+Para desmarcar uma consulta, envie uma requisição DELETE passando o id da consulta:<br/>
+Só será possível desmarcar uma consulta se o usuario da requisição for o mesmo que a marcou!
+
 `http://127.0.0.1:8000/consultas/5`
 
 ![DELETE Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/deletarconsulta.png)
