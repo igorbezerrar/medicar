@@ -74,6 +74,7 @@ $ virtualenv nome_da_virtualenv
 $ nome_da_virtualenv/Scripts/Activate
 
 ```
+<h4>Instalando requisitos do projeto</h4>
 
 Para instalar os requisitos do projeto, basta executar o seguinte comando no terminal:
 ```
