@@ -69,7 +69,7 @@ Usando a **Interface Administrativa do Django**, cadastre informações referent
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
 cadastre tambem dados sobre o **Médico**.
-![Novo Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novomedico.png)
+![Novo Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novamedico.png)
 
 Logo em seguida, será necessário criar uma **Agenda para o médico**
 
