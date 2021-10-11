@@ -51,7 +51,7 @@ Você precisará de algumas bibliotecas para executar o projeto. As dependência
 
 Para instalar os requisitos, basta executar no terminal:
 ```
-$ pip install -r requeriments.txt
+$ pip install -r requirements.txt
 
 ```
 
