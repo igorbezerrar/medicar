@@ -129,7 +129,7 @@ Logo em seguida, será necessário criar uma **Agenda para o médico**
 
 Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json. 
 Acesse e salve o arquivo, logo em seguida importe o mesmo pelo Insomnia, será criado um Workspace com
-todas as requicições configuradas. Seu único trabalho será o de adicionar o [Token gerado](#salvando-dados) para o usuario! 
+todas as requisições configuradas. Seu único trabalho será o de adicionar o [Token gerado](#salvando-dados) para o usuario! 
 
 | Requisição | Link |
 | --- | --- |
