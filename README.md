@@ -30,7 +30,7 @@ Tabela de conteúdos
 * Django versão 2.2.0
 * Django Rest Framework versão 3.12.4
 * Django Multiselectfield versão 0.1.12
-
+ 
 <h2 id='pip'>Pip</h2>
 
 ### Backend (API)
