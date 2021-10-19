@@ -6,7 +6,6 @@ from multiselectfield import MultiSelectField
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 
-
 class Especialidade(models.Model):
     id_especialidade = models.IntegerField(primary_key=True, editable=False)
     nome = models.CharField(null=False, blank=False, max_length=100)
@@ -47,7 +46,10 @@ HORARIOS = (('08:00', '08:00'),
             ('17:00', '17:00'),
             ('18:00', '18:00'),
             ('19:00', '19:00'),
-            ('20:00', '20:00'),)
+            ('20:00', '20:00'),
+            ('21:00', '21:00'),
+            ('22:00', '22:00'),
+            ('23:00', '23:00'),)
 
 class Agenda(models.Model):
 
