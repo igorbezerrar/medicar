@@ -1,8 +1,6 @@
-# medicar
-Desafio: Medicar; Sistema para gestão de consultas em uma clínica médica
 <h1 id='sobre'>Medicar</h1>
 
-Projeto realizado com Django e Rest Framework. Neste projeto, o desafio foi criar algo semelhante a um sistema de clínicas médicas.
+Projeto realizado com Django e Rest Framework. Neste projeto, o desafio foi criar um BACKEND semelhante a um sistema de clínicas médicas.
 Onde o usuário administrador loga em sua conta, podendo cadastrar especialidades médicas, médicos, agendas e marcar consultas.
 
 Tabela de conteúdos
@@ -68,10 +66,17 @@ $ virtualenv nome_da_virtualenv
 
 ```
 
-* 3º - Ativando ambiente (Windows)
+* 3º - Ativando ambiente 
 
+No Windows
 ```
 $ nome_da_virtualenv/Scripts/Activate
+
+```
+
+No Linux
+```
+$ source nome_da_virtualenv/bin/activate
 
 ```
 <h4>Instalando requisitos do projeto</h4>
