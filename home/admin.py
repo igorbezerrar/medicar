@@ -3,6 +3,11 @@ from django.contrib import admin
 from .models import Especialidade, Medico, Agenda, Consultas
 
 
+# @admin.register(Usuario)
+# class UsuarioAdmin(admin.ModelAdmin):
+#     list_display = ('user', 'nome', 'senha')
+
+
 @admin.register(Especialidade)
 class EspecialidadeAdmin(admin.ModelAdmin):
     list_display = ('id_especialidade','nome')

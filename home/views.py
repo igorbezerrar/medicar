@@ -3,15 +3,26 @@ from django.utils import timezone
 from datetime import date, time, datetime
 
 from rest_framework import viewsets
-from rest_framework.decorators import action
+from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
+from django.contrib.auth.models import User
+from rest_framework.decorators import authentication_classes, permission_classes
+from rest_framework import status, generics
 
 
 from .models import Consultas, Agenda,Medico, Especialidade
-from .serializers import ConsultaSerializer,AgendaSerializer,EspecialidadeSerializer,MedicoSerializer
+from .serializers import ConsultaSerializer,AgendaSerializer,EspecialidadeSerializer,MedicoSerializer, UsuarioSerializer
 
 from django_filters import rest_framework as filters
 from .filterset import EspecialidadeFilter, MedicoFilter, AgendaFilter
+
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.authtoken.models import Token
+from rest_framework.response import Response
 
 class EspecialidadeViewSet(viewsets.ModelViewSet):
     queryset = Especialidade.objects.all()
@@ -32,6 +43,53 @@ class MedicoViewSet(viewsets.ModelViewSet):
         if especialidade:
             return self.queryset.filter(especialidade__in=especialidade)
         return self.queryset.all()
+
+
+@authentication_classes([])
+@permission_classes([])
+class UsuarioViewSet(viewsets.ModelViewSet):
+
+    queryset = User.objects.all()
+    serializer_class = UsuarioSerializer
+
+    def create(self, request, *args, **kwargs):
+        username = self.request.data['username']
+        password = self.request.data['password']
+        email = self.request.data['email']
+
+        user = User.objects.create_user(username=username, password=password, email=email)
+        Token.objects.create(user=user)
+        serializer = UsuarioSerializer(user)
+
+        return Response(serializer.data)
+
+
+@authentication_classes([])
+@permission_classes([])
+class UserLogin(viewsets.ModelViewSet):
+
+    queryset = User.objects.all()
+    serializer_class = UsuarioSerializer
+
+    def create(self, request, *args, **kwargs):
+        username = request.data['username']
+
+        if username is None:
+            return Response({'error': 'Usuario ou Email não informado'}, status=status.HTTP_403_FORBIDDEN)
+
+        try:
+            user = User.objects.get(username=username)
+            if not user.check_password(request.data['password']):
+                return Response({'error': 'Usuario ou senha incorreto'}, status=status.HTTP_400_BAD_REQUEST)
+
+            token = Token.objects.get(user=user)
+            serializer = UsuarioSerializer(user)
+            return Response({"token": token.key, "user": serializer.data}, status=status.HTTP_200_OK)
+
+        except User.DoesNotExist:
+            return Response({'error': 'Usuario não encontrato'}, status=status.HTTP_403_FORBIDDEN)
+
+
 
 
 class AgendaViewSet(viewsets.ModelViewSet):
@@ -131,6 +189,9 @@ class ConsultasViewSet(viewsets.ModelViewSet):
     def destroy(self, request, *args, **kwargs):
         consulta = self.get_object()
         usuario = request.user
+
+        if consulta.dia < date.today():
+            return JsonResponse({'error': 'Essa consulta já ocorreu!'})
 
         if consulta.usuario == usuario:
             consulta.delete()

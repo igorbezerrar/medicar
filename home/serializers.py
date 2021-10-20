@@ -1,7 +1,16 @@
 from rest_framework import serializers, fields
 
 from .models import Especialidade, Medico, Agenda, Consultas, HORARIOS
+from django.contrib.auth.models import User
 
+class UsuarioSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = (
+            "username",
+            "email"
+        )
 
 class EspecialidadeSerializer(serializers.ModelSerializer):
 

@@ -6,6 +6,7 @@ from multiselectfield import MultiSelectField
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 
+
 class Especialidade(models.Model):
     id_especialidade = models.IntegerField(primary_key=True, editable=False)
     nome = models.CharField(null=False, blank=False, max_length=100)
