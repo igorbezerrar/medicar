@@ -18,6 +18,7 @@ class Especialidade(models.Model):
     def __str__(self):
         return self.nome
 
+
 class Medico(models.Model):
     id_medico = models.IntegerField(primary_key=True, editable=False)
     nome = models.CharField(null=False, blank=False, max_length=100)
@@ -32,7 +33,6 @@ class Medico(models.Model):
 
     def __str__(self):
         return "{}".format(self.nome)
-
 
 
 HORARIOS = (('08:00', '08:00'),
@@ -50,7 +50,9 @@ HORARIOS = (('08:00', '08:00'),
             ('20:00', '20:00'),
             ('21:00', '21:00'),
             ('22:00', '22:00'),
-            ('23:00', '23:00'),)
+            ('23:00', '23:00'),
+            ('24:00', '24:00'),)
+
 
 class Agenda(models.Model):
 
@@ -91,7 +93,9 @@ class Consultas(models.Model):
         verbose_name = "Consulta"
         verbose_name_plural = "Consultas"
         unique_together = ['dia', 'horario', 'usuario']
-
+        constraints = [
+            models.CheckConstraint(check=models.Q(dia__gte=timezone.now()), name='dia__gte'),
+        ]
 
     def __str__(self):
         return "dia={}, horario={}, data_agendamento={}, medico={}".format(
