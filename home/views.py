@@ -1,20 +1,20 @@
-from django.http import JsonResponse
 from datetime import date, datetime
 
-from rest_framework import viewsets
+from django.http import JsonResponse
 from django.contrib.auth.models import User
-from rest_framework.decorators import authentication_classes, permission_classes
-from rest_framework import status
-
 
 from .models import Consultas, Agenda,Medico, Especialidade
 from .serializers import ConsultaSerializer,AgendaSerializer,EspecialidadeSerializer,MedicoSerializer, UsuarioSerializer
+from .filterset import AgendaFilter, ConsultaFilter
 
-from django_filters import rest_framework as filters
-from .filterset import EspecialidadeFilter, MedicoFilter, AgendaFilter, ConsultaFilter
+from django_filters import rest_framework as filtro
 
+from rest_framework import viewsets
+from rest_framework import filters
 from rest_framework.authtoken.models import Token
+from rest_framework.decorators import authentication_classes, permission_classes
 from rest_framework.response import Response
+from rest_framework import status
 
 
 @authentication_classes([])
@@ -66,16 +66,17 @@ class EspecialidadeViewSet(viewsets.ModelViewSet):
     queryset = Especialidade.objects.all()
     serializer_class = EspecialidadeSerializer
 
-    filter_backends = (filters.DjangoFilterBackend,)
-    filterset_class = EspecialidadeFilter
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['nome']
 
 
 class MedicoViewSet(viewsets.ModelViewSet):
     queryset = Medico.objects.all()
     serializer_class = MedicoSerializer
 
-    filter_backends = (filters.DjangoFilterBackend,)
-    filterset_class = MedicoFilter
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['nome']
+
     def get_queryset(self):
         especialidade = self.request.query_params.getlist('especialidade')
         if especialidade:
@@ -87,7 +88,7 @@ class AgendaViewSet(viewsets.ModelViewSet):
     queryset = Agenda.objects.all()
     serializer_class = AgendaSerializer
 
-    filter_backends = (filters.DjangoFilterBackend,)
+    filter_backends = (filtro.DjangoFilterBackend,)
     filterset_class = AgendaFilter
 
 
@@ -96,7 +97,7 @@ class ConsultasViewSet(viewsets.ModelViewSet):
     queryset = Consultas.objects.all()
     serializer_class = ConsultaSerializer
 
-    filter_backends = (filters.DjangoFilterBackend,)
+    filter_backends = (filtro.DjangoFilterBackend,)
     filterset_class = ConsultaFilter
 
     def create(self, request, *args, **kwargs):
@@ -109,7 +110,6 @@ class ConsultasViewSet(viewsets.ModelViewSet):
             agenda = Agenda.objects.get(id_agenda=agenda_id)
         except Agenda.DoesNotExist:
             return JsonResponse({'error': 'Agenda inexistente!'}, status=status.HTTP_404_NOT_FOUND)
-
 
         # verificando se este usuario ja possui agenda para mesmo dia e horario
         consulta = Consultas.objects.filter(dia=agenda.dia, horario=hora, usuario=usuario)
@@ -125,14 +125,11 @@ class ConsultasViewSet(viewsets.ModelViewSet):
         if hora not in horarios:
             return JsonResponse({'error': 'Horário indisponivel nessa agenda!'}, status=status.HTTP_404_NOT_FOUND)
 
-        hora_agenda = int(hora.split(':')[0])
-        minuto_agenda = int(hora.split(':')[1])
+        ha = datetime.strptime(hora, "%H:%M").strftime("%H:%M")
+        hs = datetime.now().strftime("%H:%M")
 
-        hora_sistema = datetime.now().hour
-        minuto_sistema = datetime.now().minute
-
-        if agenda.dia == date.today():
-            if hora_agenda < hora_sistema or (hora_agenda == hora_sistema and minuto_agenda <= minuto_sistema):
+        if str(agenda.dia) == datetime.today().strftime("%Y-%m-%d") and\
+                datetime.strptime(ha, "%H:%M") < datetime.strptime(hs, "%H:%M"):
                 return JsonResponse({'error': 'Impossível marcar consulta para horario que já passou!'}, status=status.HTTP_409_CONFLICT)
 
         consulta = Consultas(dia=agenda.dia, horario=hora, medico=agenda.medico, usuario=usuario)
