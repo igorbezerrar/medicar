@@ -165,9 +165,11 @@ Ex:
 }
 
 ```
+
+![Signup](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/novousuario.png)
+
 Se tudo estiver correto, será retornado o código HTTP 200 junto com o nome e email do novo usuário.
 <br>
-![Signup](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/novousuario.png)
 
 <h4>Login</h4>
 
