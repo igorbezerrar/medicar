@@ -176,7 +176,10 @@ Se tudo estiver correto, será retornado o código HTTP 200 junto com o nome e e
 Após fazer o cadastro, realize o login no sistema! Para isso use a rota `http://127.0.0.1:8000/login/` 
 
 ![Login](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/login.png)
-
+<br>
+Se as credenciais estiverem corretas, será retorno o nome e email do usuario logado, junto com o Token de acesso ao sistema.
+A partir dele será possível realizar todas as requisições!
+<br>
 
 <h4>Adicionando o Token</h4>
 
