@@ -219,14 +219,16 @@ Por `especialidade`'s -> `http://127.0.0.1:8000/medicos/?especialidade=2&especia
 <h4 id='get-consultas'>GET Consultas</h4>
 
 Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` <br/>
-OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas elas estão ordenadas por dia.
+OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas elas estão ordenadas por dia. Consultas para dias passados também não serão listadas.
 
 ![GET Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasconsultas.png)
 
 <h4 id='get-agendas'>GET Agendas</h4>
 
 Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` <br/>
-As agendas também estão organizadas por dia.
+As agendas também estão organizadas por dia. E as mesmas que estão agendadas para dias passados também não são listados.<br>
+Os horários transcorridos, como os já preenchidos por consultas, também não são listados!
+
 
 ![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
 
