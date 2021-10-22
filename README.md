@@ -160,7 +160,7 @@ Ex:
 {
   "username": "igor",
   "password": "1234",
-	"email" : "igor@gmail.com"
+  "email" : "igor@gmail.com"
 }
 
 ```
