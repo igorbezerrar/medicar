@@ -27,6 +27,7 @@ Tabela de conteúdos
 * Python versão 3.7.0
 * Django versão 2.2.0
 * Django Rest Framework versão 3.12.4
+* Django Filter versão 21.1
 * Django Multiselectfield versão 0.1.12
  
 <h2 id='pip'>Pip</h2>
@@ -130,14 +131,6 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 Neste projeto, foram seguidas todas as orientações repassadas através do [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
-Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário criar um Token para seu usuário. 
-Na **Interface Administrativa do Django**, crie um Token o vinculando com seu usuário:
-
-![Novo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/token.png)
-
-O Token pode ser acessado nessa aba:
-![Resultado Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/tokengerado.png)
-
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
@@ -156,6 +149,30 @@ todas as requisições configuradas. Este Workspace já contém o Token para o u
 | Requisição | Link |
 | --- | --- |
 | `Todas requisições` | Link https://raw.githubusercontent.com/igorbezerra21/imagens_readme.md/main/Insomnia_2021-10-11.json |
+
+<h4>Cadastrando-se no sistema</h4>
+
+Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário fazer o cadastro do sistema!
+
+Para isso, use a requisição `http://127.0.0.1:8000/rest_auth/registration/` passando um Json com o `username`, `password`,`email`
+Ex:
+```
+{
+  "username": "igor",
+  "password": "1234",
+	"email" : "igor@gmail.com"
+}
+
+```
+
+![Signup](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/novousuario.png)
+
+<h4>Login</h4>
+
+Após fazer o cadastro, realize o login no sistema! Para isso use a rota `http://127.0.0.1:8000/login/` 
+
+![Login](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/login.png)
+
 
 <h4>Adicionando o Token</h4>
 
