@@ -113,7 +113,7 @@ $ python manage.py makemigrations
 ```
 
 * 3º
-Ao fazer as migrações, alguns dados já serão importados, inclusive um administrador `root`<br/>
+Ao fazer as migrações, alguns dados já serão importados, inclusive um administrador `root` com senha `1234`<br/>
 Caso queira criar um usuario administrador, execute o seguinte comando no terminal:
 ```
 $ python manage.py createsuperuser
