@@ -1,7 +1,7 @@
 <h1 id='sobre'>Medicar</h1>
 
 Projeto realizado com Django e Rest Framework. Neste projeto, o desafio foi criar um BACKEND semelhante a um sistema de clínicas médicas.
-Onde o usuário administrador loga em sua conta, podendo cadastrar especialidades médicas, médicos, agendas e marcar consultas.
+Onde o usuário poderá criar uma conta, logar-se, e assim, agendar consultas. O usuário administrador poderá cadastrar especialidades médicas, médicos e agendas
 
 Tabela de conteúdos
 =================
@@ -12,6 +12,9 @@ Tabela de conteúdos
    * [Iniciando](#iniciando)
    * [Salvando dados](#salvando-dados)
    * [Requisições usando Insomnia](#insomnia)
+      * [Cadastrando-se no sistema](#cadastrandosenosistema) 
+      * [Login](#login) 
+      * [Adicionando o Token](#adicionandootoken)
       * [GET Especialidade](#get-especialidade)
       * [GET Medicos](#get-medicos)
       * [GET Consultas](#get-consultas)
@@ -153,7 +156,7 @@ todas as requisições configuradas.
 | --- | --- |
 | `Todas requisições` | Link https://raw.githubusercontent.com/igorbezerra21/imagens_readme.md/main/Insomnia_2021-10-11.json |
 
-<h4>Cadastrando-se no sistema</h4>
+<h4 id='cadastrandosenosistema'>Cadastrando-se no sistema</h4>
 
 Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário fazer o cadastro do sistema!
 
@@ -174,7 +177,7 @@ Ex:
 Se tudo estiver correto, será retornado o código HTTP 200 junto com o nome e email do novo usuário.
 <br>
 
-<h4>Login</h4>
+<h4 id='login'>Login</h4>
 
 Após fazer o cadastro, realize o login no sistema! Para isso use a rota `http://127.0.0.1:8000/login/` 
 
@@ -184,9 +187,9 @@ Se as credenciais estiverem corretas, será retorno o nome e email do usuario lo
 A partir dele será possível realizar todas as requisições!
 <br>
 
-<h4>Adicionando o Token</h4>
+<h4 id='adicionandootoken'>Adicionando o Token</h4>
 
-Para adicionar/substituir o [Token gerado](#salvando-dados) para seu usuário, em cada requisição, acesse a aba `Header` e o adicione.
+Para adicionar/substituir o [Token gerado](#salvando-dados) e que é retornado ao fazer o login, em cada requisição, acesse a aba `Header` e o adicione.
 
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
@@ -219,15 +222,16 @@ Por `especialidade`'s -> `http://127.0.0.1:8000/medicos/?especialidade=2&especia
 <h4 id='get-consultas'>GET Consultas</h4>
 
 Para buscar todas as consultas, use a requisição: `http://127.0.0.1:8000/consultas/` <br/>
-OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas elas estão ordenadas por dia. Consultas para dias passados também não serão listadas.
 
 ![GET Consulta](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasconsultas.png)
+
+OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas elas estão ordenadas por dia e horário. Consultas para dias passados também não serão listadas.
 
 <h4 id='get-agendas'>GET Agendas</h4>
 
 Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` <br/>
-As agendas também estão organizadas por dia, e as mesmas que estão agendadas para dias passados não são listados.<br>
-Os horários transcorridos, como os já preenchidos por consultas, também são removidos da consulta!
+As agendas também estão organizadas por dia e horário, e as mesmas que estão agendadas para dias passados não são listados.<br>
+Os horários transcorridos, como também os já preenchidos por consultas, são removidos da consulta!
 
 
 ![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
@@ -253,7 +257,7 @@ Para marcar uma nova consulta, você usará uma requisicão do tipo `POST` passa
 <h4 id='delete-consulta'>DELETE Consulta</h4>
 
 Para desmarcar uma consulta, envie uma requisição DELETE passando o id da consulta:<br/>
-Só será possível desmarcar uma consulta se o usuario da requisição for o mesmo que a marcou!
+Só será possível desmarcar uma consulta se o usuario da requisição for o mesmo que a marcou. Consultas que já passaram também não podem ser excluidas!
 
 `http://127.0.0.1:8000/consultas/5`
 
@@ -262,7 +266,7 @@ Só será possível desmarcar uma consulta se o usuario da requisição for o me
 <h2 id='link'>Link's</h2>
  
 - Repositório: https://github.com/igorbezerra21/medicar
-     - Em caso de dúvidas ou sugestões, fique à vontade para entrar em contato e/ou solicitar **pull requests**. 
+     - Em caso de dúvidas e/ou sugestões, fique à vontade para entrar em contato e/ou solicitar **pull requests**. 
  
  
 <h2 id='criador'>Criador</h2>
