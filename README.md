@@ -156,7 +156,7 @@ todas as requisições pré-configuradas.
 
 | Requisição | Link |
 | --- | --- |
-| `Todas requisições` | Link https://raw.githubusercontent.com/igorbezerra21/imagens_readme.md/main/Insomnia_2021-10-11.json |
+| `Todas requisições` | Link https://github.com/igorbezerra21/imagens_readme.md/blob/main/Insomnia_2021-10-22.json |
 
 <h4 id='cadastrandosenosistema'>Cadastrando-se no sistema</h4>
 
