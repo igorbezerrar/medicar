@@ -113,7 +113,7 @@ $ python manage.py makemigrations
 ```
 
 * 3º
-Ao fazer as migrações, alguns dados já serão importados, inclusive um admnistrador `root`<br/>
+Ao fazer as migrações, alguns dados já serão importados, inclusive um administrador `root`<br/>
 Caso queira criar um usuario administrador, execute o seguinte comando no terminal:
 ```
 $ python manage.py createsuperuser
@@ -137,20 +137,22 @@ Neste projeto, foram seguidas todas as orientações repassadas através do [REA
 Para acessar a **Interface Administrativa do Django**, utilize a rota `http://127.0.0.1:8000/admin/login/?next=/admin/`
 <br>
 
-Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
+Usando a **Interface Administrativa do Django**, será possivel cadastrar dados referentes as especialidades médicas, os médicos e criar agendas para cada médico.
+
+Cadastrando informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
 Cadastre tambem dados sobre o **Médico**.
 ![Novo Medico](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novamedico.png)
 
-Logo em seguida, será necessário criar uma **Agenda para o médico**
+Logo em seguida, crie uma **agenda para o médico**
 ![Nova Agenda](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaagenda.png)
 
 <h2 id='insomnia'>Requisições usando Insomnia</h2>
 
-Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json. 
-Acesse e salve o arquivo, logo em seguida importe o mesmo pelo Insomnia, será criado um Workspace com
-todas as requisições configuradas.
+Para facilitar sua vida, na tabela abaxo segue um link para o download de um arquivo .json , 
+acesse e salve-o. Logo em seguida, importe o mesmo pelo Insomnia, será criado um Workspace com
+todas as requisições pré-configuradas.
 
 | Requisição | Link |
 | --- | --- |
@@ -183,13 +185,13 @@ Após fazer o cadastro, realize o login no sistema! Para isso use a rota `http:/
 
 ![Login](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/login.png)
 <br>
-Se as credenciais estiverem corretas, será retorno o nome e email do usuario logado, junto com o Token de acesso ao sistema.
-A partir dele será possível realizar todas as requisições!
+Se as credenciais estiverem corretas, será retornado o nome e email do usuario logado, junto com o Token de acesso ao sistema.
+A partir dele será possível realizar as demais requisições!
 <br>
 
 <h4 id='adicionandootoken'>Adicionando o Token</h4>
 
-Para adicionar/substituir o [Token gerado](#salvando-dados) e que é retornado ao fazer o login, em cada requisição, acesse a aba `Header` e o adicione.
+Para adicionar/substituir o [token](#login) e que é retornado ao fazer o login, em cada requisição, acesse a aba `Header` e o adicione.
 
 ![Substituindo Token](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia_token.png)
 
@@ -229,9 +231,10 @@ OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas e
 
 <h4 id='get-agendas'>GET Agendas</h4>
 
-Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` <br/>
-As agendas também estão organizadas por dia e horário, e as mesmas que estão agendadas para dias passados não são listados.<br>
-Os horários transcorridos, como também os já preenchidos por consultas, são removidos da consulta!
+Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` 
+<br>
+As agendas também estão organizadas por dia e horário, e as mesmas que estão agendadas para dias passados não são listadas.<br>
+Os horários transcorridos, como também os já preenchidos por consultas, são removidos da listagem!
 
 
 ![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
@@ -257,7 +260,8 @@ Para marcar uma nova consulta, você usará uma requisicão do tipo `POST` passa
 <h4 id='delete-consulta'>DELETE Consulta</h4>
 
 Para desmarcar uma consulta, envie uma requisição DELETE passando o id da consulta:<br/>
-Só será possível desmarcar uma consulta se o usuario da requisição for o mesmo que a marcou. Consultas que já passaram também não podem ser excluidas!
+Só será possível desmarcar uma consulta se o usuario da requisição for o mesmo que a marcou;<br>
+Consultas que já passaram também não podem ser excluidas!
 
 `http://127.0.0.1:8000/consultas/5`
 
