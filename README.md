@@ -226,8 +226,8 @@ OBS: Será mostrado apenas as consultas que pertecem ao usuário logado. Todas e
 <h4 id='get-agendas'>GET Agendas</h4>
 
 Todas as agendas disponivéis poderão ser acessadas a partir da requisição `http://127.0.0.1:8000/agenda/` <br/>
-As agendas também estão organizadas por dia. E as mesmas que estão agendadas para dias passados também não são listados.<br>
-Os horários transcorridos, como os já preenchidos por consultas, também não são listados!
+As agendas também estão organizadas por dia, e as mesmas que estão agendadas para dias passados não são listados.<br>
+Os horários transcorridos, como os já preenchidos por consultas, também são removidos da consulta!
 
 
 ![GET Agendas](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/todasagendas.png)
