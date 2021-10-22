@@ -7,7 +7,6 @@ from datetime import datetime
 
 
 class UsuarioSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = User
         fields = (
@@ -17,7 +16,6 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
 
 class EspecialidadeSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Especialidade
         fields = (
@@ -27,20 +25,19 @@ class EspecialidadeSerializer(serializers.ModelSerializer):
 
 
 class MedicoSerializer(serializers.ModelSerializer):
-
     especialidade = EspecialidadeSerializer()
 
     class Meta:
         model = Medico
         fields = (
-              'id_medico',
-              'crm',
-              'nome',
-              "especialidade",
+            'id_medico',
+            'crm',
+            'nome',
+            "especialidade",
         )
 
-class AgendaSerializer(serializers.Serializer):
 
+class AgendaSerializer(serializers.Serializer):
     id_agenda = serializers.IntegerField()
     medico = MedicoSerializer(read_only=True)
     dia = serializers.DateField()
@@ -49,37 +46,49 @@ class AgendaSerializer(serializers.Serializer):
     class Meta:
         model = Agenda
         fields = (
-                "id_agenda",
-                "medico",
-                "dia",
-                "horarios"
+            "id_agenda",
+            "medico",
+            "dia",
+            "horarios"
         )
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
+        horarios = instance.horarios
+        horas_disponiveis = []
+        # VERIFICANDO SE O DIA DA AGENDA É O ATUAL, CASO SIM, RETORNO SOMENTE OS HORARIOS NÃO DECORRIDOS
         if str(instance.dia) == datetime.today().strftime("%Y-%m-%d"):
-            horarios = instance.horarios
-            horas_disponiveis = []
             for h in horarios:
                 if h > datetime.now().strftime("%H:%M"):
+                    consulta = Consultas.objects.filter(dia=instance.dia, horario=h, medico=instance.medico)
+                    if not consulta:# AGORA VERIFICO SE JÁ ESTÁ PREENCHIDA OU NÃO
+                        horas_disponiveis.append(h)
+            representation['horarios'] = horas_disponiveis
+
+        # SE FOR UM DIA FUTURO, VERIFICO SE TAL HORARIO AINDA ESTÁ DISPONÍVEL
+        elif str(instance.dia) >= datetime.today().strftime("%Y-%m-%d"):
+            for h in horarios:
+                consulta = Consultas.objects.filter(dia=instance.dia, horario=h, medico=instance.medico)
+                if not consulta:
                     horas_disponiveis.append(h)
+
             representation['horarios'] = horas_disponiveis
 
         return representation
 
 
 class ConsultaSerializer(serializers.ModelSerializer):
-    #Nexted Relationship
+    # Nexted Relationship
     medico = MedicoSerializer(read_only=True)
 
     class Meta:
         model = Consultas
         fields = (
-                "id_consulta",
-                "dia",
-                "horario",
-                "data_agendamento",
-                "medico"
+            "id_consulta",
+            "dia",
+            "horario",
+            "data_agendamento",
+            "medico"
         )
 
     def to_representation(self, instance):

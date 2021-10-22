@@ -17,7 +17,7 @@ class AgendaFilter(filters.FilterSet):
 
     class Meta:
         model = Agenda
-        fields = ['medico', 'data_inicio', 'data_final']
+        fields = ['medico', 'especialidade', 'data_inicio', 'data_final']
 
 
 class ConsultaFilter(filters.FilterSet):
