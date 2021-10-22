@@ -155,6 +155,7 @@ todas as requisições configuradas.
 Antes de qualquer coisa, para que você consiga realizar qualquer tipo de requisição a API, será necessário fazer o cadastro do sistema!
 
 Para isso, use a requisição `http://127.0.0.1:8000/rest_auth/registration/` passando um Json com o `username`, `password`,`email`
+<br>
 Ex:
 ```
 {
@@ -164,7 +165,8 @@ Ex:
 }
 
 ```
-
+Se tudo estiver correto, será retornado o código HTTP 200 junto com o nome e email do novo usuário.
+<br>
 ![Signup](https://github.com/igorbezerra21/imagens_readme.md/blob/main/insomnia/novousuario.png)
 
 <h4>Login</h4>
