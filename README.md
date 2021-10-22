@@ -131,6 +131,9 @@ Se estiver usando, certifique-se de ter o ambiente virtual em execução e na me
 
 Neste projeto, foram seguidas todas as orientações repassadas através do [README.md](https://github.com/Intmed-Software/desafio/blob/master/backend/README.md)
 
+Para acessar a **Interface Administrativa do Django**, utilize a rota `http://127.0.0.1:8000/admin/login/?next=/admin/`
+<br>
+
 Usando a **Interface Administrativa do Django**, cadastre informações referente a **Especialidade** 
 ![Nova Especialidade](https://github.com/igorbezerra21/imagens_readme.md/blob/main/novaespecialidade.png)
 
